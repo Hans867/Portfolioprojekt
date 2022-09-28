@@ -5,15 +5,47 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
 }
 .introContainer {
     position: absolute;
-    top: 0px;
+    top: 0;
 }
 
 .container {
-    width: 800px;
+    width: 1000px;
     border-radius: 10px;
+    box-shadow: 0 0 10px 2px
+}
 
+.buttons {
+    display: grid;
+    gap: 5px;
+    padding: 10px 20px;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.button:hover {
+    border-color: black;
+}
+
+.startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.startButton:hover {
+    background-color: #3cd93c;
+}
+
+.hide {
+    display: none;
 }
