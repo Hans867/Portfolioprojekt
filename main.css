@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 150vh;
+}
+.introContainer {
+    position: absolute;
+    top: 0px;
+}
+
+.container {
+    width: 800px;
+    border-radius: 10px;
+
+}
