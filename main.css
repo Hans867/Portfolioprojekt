@@ -18,6 +18,13 @@ body {
     box-shadow: 0 0 10px 2px
 }
 
+#questions {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: x-large;
+}
+
 .buttons {
     display: grid;
     gap: 5px;

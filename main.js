@@ -1,5 +1,12 @@
 const header = document.querySelector('#header')
 const startButton = document.querySelector('.startButton')
+const questionsElement = document.querySelector('#questionsContainer')
+
+    startButton.addEventListener('click', function (){
+        startButton.classList.add('hide');
+            header.classList.add('hide');
+            questionsElement.classList.remove('hide')
+    })
 
 
 
