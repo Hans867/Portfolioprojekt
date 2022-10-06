@@ -41,9 +41,6 @@ body {
 }
 
 .startButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
@@ -51,6 +48,11 @@ body {
 
 .startButton:hover {
     background-color: #3cd93c;
+}
+
+.startContainer {
+    position: absolute;
+    bottom: 150px;
 }
 
 .hide {

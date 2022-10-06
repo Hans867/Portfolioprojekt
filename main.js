@@ -175,8 +175,6 @@ function setQuestions (question) {
 }
 setQuestions(questions[0])
 
-// now i want to loop all questions
-
 // evenlist alle knapper, alle knapper gør det samme
 
 const aswerKnap1 = document.querySelector('#option1')
@@ -184,31 +182,21 @@ const aswerKnap2 = document.querySelector('#option2')
 const aswerKnap3 = document.querySelector('#option3')
 const aswerKnap4 = document.querySelector('#option4')
 
-
-
-aswerKnap1.addEventListener('click', function () {
-    alert('hej')
+aswerKnap1.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'red'
 })
-
-aswerKnap2.addEventListener('click', function () {
-    alert('hej')
+aswerKnap2.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'red'
 })
+aswerKnap3.addEventListener('click', function (event) {
 
-aswerKnap3.addEventListener('click', function () {
-    alert('hej')
+    event.target.style.backgroundColor = 'green'
 })
-
-aswerKnap4.addEventListener('click', function () {
-    alert('hej')
+aswerKnap4.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'red'
 })
 
 
-/*
-const set = (question) => {
-    for (let i = 0; i < questions.length; i++)
-    {
-        if (question[i])
 
-            }}
-document.querySelector('#questionsHeadline').innerHTML = questions;
- */
+
+
