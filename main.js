@@ -1,3 +1,6 @@
+// When you press start the startButton and header disappears ('hide')
+// and the questionContainer will show - remove ('hide')
+
 const header = document.querySelector('#header')
 const startButton = document.querySelector('.startButton')
 const questionsElement = document.querySelector('#questionsContainer')
@@ -8,53 +11,7 @@ const questionsElement = document.querySelector('#questionsContainer')
             questionsElement.classList.remove('hide')
     })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// All my questions
 
 const questions = [
     {
@@ -202,3 +159,56 @@ const questions = [
         ]
     }
 ]
+
+// I now want to display the question and answer options
+
+function setOptions (question) {
+    document.querySelector('#option1').textContent = question.answers[0].text
+    document.querySelector('#option2').textContent = question.answers[1].text
+    document.querySelector('#option3').textContent = question.answers[2].text
+    document.querySelector('#option4').textContent = question.answers[3].text
+}
+setOptions(questions[0])
+
+function setQuestions (question) {
+    document.querySelector('#questionsHeadline').textContent = question.question
+}
+setQuestions(questions[0])
+
+// now i want to loop all questions
+
+// evenlist alle knapper, alle knapper gør det samme
+
+const aswerKnap1 = document.querySelector('#option1')
+const aswerKnap2 = document.querySelector('#option2')
+const aswerKnap3 = document.querySelector('#option3')
+const aswerKnap4 = document.querySelector('#option4')
+
+
+
+aswerKnap1.addEventListener('click', function () {
+    alert('hej')
+})
+
+aswerKnap2.addEventListener('click', function () {
+    alert('hej')
+})
+
+aswerKnap3.addEventListener('click', function () {
+    alert('hej')
+})
+
+aswerKnap4.addEventListener('click', function () {
+    alert('hej')
+})
+
+
+/*
+const set = (question) => {
+    for (let i = 0; i < questions.length; i++)
+    {
+        if (question[i])
+
+            }}
+document.querySelector('#questionsHeadline').innerHTML = questions;
+ */
