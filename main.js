@@ -4,12 +4,16 @@
 
 const header = document.querySelector('#header')
 const startButton = document.querySelector('.startButton')
-const questionsElement = document.querySelector('#questionsContainer')
+const questionContainer = document.querySelector('#questionsContainer')
+const questionsElement = document.querySelector('#container')
+const questionsElement1 = document.querySelector('#container1')
+const restartContainer = document.querySelector('#restartButton')
 
     startButton.addEventListener('click', function (){
         startButton.classList.add('hide');
             header.classList.add('hide');
             questionsElement.classList.remove('hide')
+                questionContainer.classList.remove('hide')
     })
 
 // All my questions
@@ -165,6 +169,18 @@ const questions = [
 
 let score = 0;
 
+// when the quiz is over I want to display the result
+
+const result = document.querySelector('#result')
+const restartButton = document.querySelector('#restartButton')
+
+// when you press the restartButton the quiz should restart.
+
+restartButton.addEventListener('click', function (){
+    startButton.classList.remove('hide')
+    header.classList.remove('hide')
+})
+
 // I now want to display the first question and answer options
 
 function setOptions (question) {
@@ -209,8 +225,6 @@ answerButton4.addEventListener('click', function (event) {
 
 // know I want to display the next question of my quiz
 
-const questionsElement1 = document.querySelector('#questionsContainer1')
-
 function setOptions1 (question) {
     document.querySelector('#option12').textContent = question.answers[0].text
     document.querySelector('#option22').textContent = question.answers[1].text
@@ -232,22 +246,33 @@ const answerButton42 = document.querySelector('#option42')
 answerButton12.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'green'
     score++;
+    questionsElement1.classList.add('hide')
+    restartContainer.classList.remove('hide')
+    result.classList.remove('hide')
+    restartButton.classList.remove('hide')
 })
 answerButton22.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'red'
+    questionsElement1.classList.add('hide')
+    restartContainer.classList.remove('hide')
+    result.classList.remove('hide')
+    restartButton.classList.remove('hide')
 })
 answerButton32.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'red'
+    questionsElement1.classList.add('hide')
+    restartContainer.classList.remove('hide')
+    result.classList.remove('hide')
+    restartButton.classList.remove('hide')
 })
 answerButton42.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'green'
     score++;
+    questionsElement1.classList.add('hide')
+    restartContainer.classList.remove('hide')
+    result.classList.remove('hide')
+    restartButton.classList.remove('hide')
 })
-
-// when the quiz is over I want to display the result
-
-const result = document.querySelector('#result')
-const restartButton = document.querySelector('#restartButton')
 
 
 

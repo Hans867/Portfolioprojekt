@@ -12,13 +12,26 @@ body {
     top: 0;
 }
 
-.container {
+#container {
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 2px
+}
+
+#container1 {
     width: 1000px;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px
 }
 
 #questionsHeadline {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#questionsHeadline1 {
     display: flex;
     justify-content: center;
     font-weight: bold;
@@ -55,6 +68,12 @@ body {
     bottom: 150px;
 }
 
+#restartContainer {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px
+}
+
 #result {
     display: flex;
     justify-content: center;
@@ -66,9 +85,6 @@ body {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
-    position: absolute;
-    bottom: 150px;
-
 }
 
 .hide {
