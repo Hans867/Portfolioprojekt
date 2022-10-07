@@ -160,7 +160,11 @@ const questions = [
     }
 ]
 
-// I now want to display the question and answer options
+// I want to keep score, so you get the result of answered correctly.
+
+let score = 0;
+
+// I now want to display the first question and answer options
 
 function setOptions (question) {
     document.querySelector('#option1').textContent = question.answers[0].text
@@ -175,26 +179,72 @@ function setQuestions (question) {
 }
 setQuestions(questions[0])
 
-// evenlist alle knapper, alle knapper gør det samme
+const answerButton1 = document.querySelector('#option1')
+const answerButton2 = document.querySelector('#option2')
+const answerButton3 = document.querySelector('#option3')
+const answerButton4 = document.querySelector('#option4')
 
-const aswerKnap1 = document.querySelector('#option1')
-const aswerKnap2 = document.querySelector('#option2')
-const aswerKnap3 = document.querySelector('#option3')
-const aswerKnap4 = document.querySelector('#option4')
-
-aswerKnap1.addEventListener('click', function (event) {
+answerButton1.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'red'
+    questionsElement.classList.add('hide')
+    questionsElement1.classList.remove('hide')
 })
-aswerKnap2.addEventListener('click', function (event) {
+answerButton2.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'red'
+    questionsElement.classList.add('hide')
+    questionsElement1.classList.remove('hide')
 })
-aswerKnap3.addEventListener('click', function (event) {
-
+answerButton3.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'green'
+    score++;
+    questionsElement.classList.add('hide')
+    questionsElement1.classList.remove('hide')
 })
-aswerKnap4.addEventListener('click', function (event) {
+answerButton4.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'red'
+    questionsElement.classList.add('hide')
+    questionsElement1.classList.remove('hide')
+})
+
+// know I want to display the next question of my quiz
+
+const questionsElement1 = document.querySelector('#questionsContainer1')
+
+function setOptions1 (question) {
+    document.querySelector('#option12').textContent = question.answers[0].text
+    document.querySelector('#option22').textContent = question.answers[1].text
+    document.querySelector('#option32').textContent = question.answers[2].text
+    document.querySelector('#option42').textContent = question.answers[3].text
+}
+setOptions1(questions[1])
+
+function setQuestions1 (question) {
+    document.querySelector('#questionsHeadline1').textContent = question.question
+}
+setQuestions1(questions[1])
+
+const answerButton12 = document.querySelector('#option12')
+const answerButton22 = document.querySelector('#option22')
+const answerButton32 = document.querySelector('#option32')
+const answerButton42 = document.querySelector('#option42')
+
+answerButton12.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'green'
+    score++;
+})
+answerButton22.addEventListener('click', function (event) {
     event.target.style.backgroundColor = 'red'
 })
+answerButton32.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'red'
+})
+answerButton42.addEventListener('click', function (event) {
+    event.target.style.backgroundColor = 'green'
+    score++;
+})
+
+// when the quiz is over I want to display the result
+
 
 
 
