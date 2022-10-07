@@ -1,5 +1,6 @@
-// When you press start the startButton and header disappears ('hide')
-// and the questionContainer will show - remove ('hide')
+// When you press start, the startButton and header disappears .add('hide')
+// and the questionContainer will show - remove .remove('hide')
+// 'hide' is a class I've given the html elements and "display: none" them in css.
 
 const header = document.querySelector('#header')
 const startButton = document.querySelector('.startButton')
@@ -246,6 +247,8 @@ answerButton42.addEventListener('click', function (event) {
 // when the quiz is over I want to display the result
 
 const result = document.querySelector('#result')
+const restartButton = document.querySelector('#restartButton')
+
 
 
 
