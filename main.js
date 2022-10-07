@@ -245,6 +245,8 @@ answerButton42.addEventListener('click', function (event) {
 
 // when the quiz is over I want to display the result
 
+const result = document.querySelector('#result')
+
 
 
 
