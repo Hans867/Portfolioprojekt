@@ -206,20 +206,20 @@ const answerButton2 = document.querySelector('#option2')
 const answerButton3 = document.querySelector('#option3')
 const answerButton4 = document.querySelector('#option4')
 
-answerButton1.addEventListener('click', function (event) {
+answerButton1.addEventListener('click', function () {
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
-answerButton2.addEventListener('click', function (event) {
+answerButton2.addEventListener('click', function () {
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
-answerButton3.addEventListener('click', function (event) {
+answerButton3.addEventListener('click', function () {
     if ('click') score++;
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
-answerButton4.addEventListener('click', function (event) {
+answerButton4.addEventListener('click', function () {
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
@@ -244,20 +244,20 @@ const answerButton22 = document.querySelector('#option22')
 const answerButton32 = document.querySelector('#option32')
 const answerButton42 = document.querySelector('#option42')
 
-answerButton12.addEventListener('click', function (event) {
+answerButton12.addEventListener('click', function () {
     score++;
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
 })
-answerButton22.addEventListener('click', function (event) {
+answerButton22.addEventListener('click', function () {
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
 })
-answerButton32.addEventListener('click', function (event) {
+answerButton32.addEventListener('click', function () {
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
 })
-answerButton42.addEventListener('click', function (event) {
+answerButton42.addEventListener('click', function () {
     score++;
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
