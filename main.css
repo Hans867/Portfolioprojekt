@@ -7,6 +7,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
 .introContainer {
     position: absolute;
     top: 0;
@@ -45,12 +46,12 @@ body {
 }
 
 .button {
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 15px;
 }
 
 .button:hover {
-    border-color: black;
+    border-color: #c52100;
 }
 
 .startButton {
@@ -90,3 +91,5 @@ body {
 .hide {
     display: none;
 }
+
+

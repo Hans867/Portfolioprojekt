@@ -7,7 +7,7 @@ const startButton = document.querySelector('.startButton')
 const questionContainer = document.querySelector('#questionsContainer')
 const questionsElement = document.querySelector('#container')
 const questionsElement1 = document.querySelector('#container1')
-const restartContainer = document.querySelector('#restartButton')
+const restartContainer = document.querySelector('#restartContainer')
 
     startButton.addEventListener('click', function (){
         startButton.classList.add('hide');
@@ -83,7 +83,7 @@ const questions = [
         ]
     },
     {
-        question: 'Hvor blev finalen spillet i EM 2020?',
+        question: 'Hvilket stadion blev finalen spillet i EM 2020?',
         answers: [
             { text: 'Wembley Stadium', correct: true },
             { text: 'Telia Parken', correct: false },
@@ -137,7 +137,7 @@ const questions = [
         ]
     },
     {
-        question: 'Hvor mange stadioner har der været spillet på under EM?',
+        question: 'Hvor mange stadioner har der været spillet på under EM 2020?',
         answers: [
             { text: '9', correct: false },
             { text: '10', correct: false },
@@ -146,7 +146,7 @@ const questions = [
         ]
     },
     {
-        question: 'Hvilken rekord er blevet slået under EM?',
+        question: 'Hvilken rekord er blevet slået under EM 2020?',
         answers: [
             { text: 'Flest røde kort i en EM-slutrunde', correct: false },
             { text: 'Flest skud på stolpen i en EM-slutrunde', correct: false },
@@ -172,7 +172,10 @@ let score = 0;
 // when the quiz is over I want to display the result
 
 const result = document.querySelector('#result')
-const restartButton = document.querySelector('#restartButton')
+
+document.querySelector('#result').textContent = score
+
+/*
 
 // when you press the restartButton the quiz should restart.
 
@@ -180,6 +183,8 @@ restartButton.addEventListener('click', function (){
     startButton.classList.remove('hide')
     header.classList.remove('hide')
 })
+
+ */
 
 // I now want to display the first question and answer options
 
@@ -202,23 +207,19 @@ const answerButton3 = document.querySelector('#option3')
 const answerButton4 = document.querySelector('#option4')
 
 answerButton1.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'red'
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
 answerButton2.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'red'
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
 answerButton3.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'green'
-    score++;
+    if ('click') score++;
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
 answerButton4.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'red'
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
 })
@@ -244,35 +245,24 @@ const answerButton32 = document.querySelector('#option32')
 const answerButton42 = document.querySelector('#option42')
 
 answerButton12.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'green'
     score++;
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
-    result.classList.remove('hide')
-    restartButton.classList.remove('hide')
 })
 answerButton22.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'red'
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
-    result.classList.remove('hide')
-    restartButton.classList.remove('hide')
 })
 answerButton32.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'red'
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
-    result.classList.remove('hide')
-    restartButton.classList.remove('hide')
 })
 answerButton42.addEventListener('click', function (event) {
-    event.target.style.backgroundColor = 'green'
     score++;
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
-    result.classList.remove('hide')
-    restartButton.classList.remove('hide')
 })
+
 
 
 
