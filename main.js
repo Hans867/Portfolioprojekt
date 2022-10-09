@@ -169,6 +169,15 @@ const questions = [
 
 let score = 0;
 let clicked = false;
+const result = document.querySelector('#result')
+
+function resultScore () {
+    {
+        if (clicked === true) {
+            score++
+        }
+    }
+}
 
 // I now want to display the first question and answer options
 
@@ -201,7 +210,9 @@ answerButton2.addEventListener('click', function () {
 answerButton3.addEventListener('click', function () {
     clicked = true
     if (clicked === true) {
-        score += 1
+        score ++
+        console.log(score)
+        document.querySelector('#result').textContent = resultScore()
     }
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
@@ -234,7 +245,9 @@ const answerButton42 = document.querySelector('#option42')
 answerButton12.addEventListener('click', function () {
     clicked = true
     if (clicked === true) {
-        score += 1
+        score ++
+        console.log(score)
+        document.querySelector('#result').textContent = resultScore()
     }
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
@@ -250,7 +263,9 @@ answerButton32.addEventListener('click', function () {
 answerButton42.addEventListener('click', function () {
     clicked = true
     if (clicked === true) {
-        score += 1
+        score ++
+        console.log(score)
+        document.querySelector('#result').textContent = resultScore()
     }
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
@@ -258,8 +273,7 @@ answerButton42.addEventListener('click', function () {
 
 // when the quiz is over I want to display the result
 
-document.querySelector('#result').textContent = score
-
+document.querySelector('#result').textContent = resultScore()
 
 /*
 if (answerButton3 === 'Italien') {
@@ -274,6 +288,12 @@ document.querySelector('#result').textContent = score
 document.querySelector('#option3').onclick = function () {
     score += 1;
 }
+
+if (clicked === true) {
+        score ++
+        console.log(score)
+        document.querySelector('#result').textContent = resultScore()
+    }
 
  */
 
