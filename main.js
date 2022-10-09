@@ -22,43 +22,43 @@ const questions = [
     {
         question: 'Hvem vandt EM 2020?',
         answers: [
-            { text: 'Frankrig', correct: false },
-            { text: 'Danmark', correct: false },
-            { text: 'Italien', correct: true },
-            { text: 'England', correct: false }
+            { text: 'Frankrig'},
+            { text: 'Danmark'},
+            { text: 'Italien'},
+            { text: 'England'}
         ]
     },
     {
         question: 'Hvem var topscorer under EM 2020?',
         answers: [
-            { text: 'Patrik Schick', correct: true },
-            { text: 'Karim Benzema', correct: false },
-            { text: 'Christian Eriksen', correct: false },
-            { text: 'Cristiano Ronaldo', correct: true }
+            { text: 'Patrik Schick'},
+            { text: 'Karim Benzema'},
+            { text: 'Christian Eriksen'},
+            { text: 'Cristiano Ronaldo'}
         ]
     },
     {
         question: 'Hvad blev Danmark-Finland?',
         answers: [
-            { text: '4-0', correct: false },
-            { text: '1-2', correct: false },
-            { text: '1-4', correct: false },
-            { text: '0-1', correct: true }
+            { text: '4-0'},
+            { text: '1-2'},
+            { text: '1-4'},
+            { text: '0-1'}
         ]
     },
     {
         question: 'Hvem var Dansk topscorer under EM 2020?',
         answers: [
-            { text: 'Kasper Dolberg', correct: true },
-            { text: 'Yussuf Poulsen', correct: false },
-            { text: 'Mikkel Damsgaard', correct: false },
-            { text: 'Joakim Mæhle', correct: false }
+            { text: 'Kasper Dolberg'},
+            { text: 'Yussuf Poulsen'},
+            { text: 'Mikkel Damsgaard'},
+            { text: 'Joakim Mæhle'}
         ]
     },
     {
         question: 'Hvor mange mål scorede Danmark under EM 2020?',
         answers: [
-            { text: '10', correct: false },
+            { text: '10'},
             { text: '11', correct: false },
             { text: '12', correct: true },
             { text: '13', correct: false }
@@ -214,7 +214,7 @@ answerButton4.addEventListener('click', function () {
     questionsElement1.classList.remove('hide')
 })
 
-// know I want to display the next question of my quiz and so on
+// know I want to display the next questions of my quiz using the same curse of action.
 
 function setOptions1 (question) {
     document.querySelector('#option12').textContent = question.answers[0].text
@@ -253,12 +253,17 @@ answerButton32.addEventListener('click', function () {
     restartContainer.classList.remove('hide')
 })
 answerButton42.addEventListener('click', function () {
+    clicked = true
+    if (clicked === true) {
         score ++
         console.log(score)
         document.querySelector('#result').textContent = score
+    }
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
 })
+
+
 
 // If you didn't get any questions correct I want display 0
 
