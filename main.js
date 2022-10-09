@@ -36,132 +36,6 @@ const questions = [
             { text: 'Christian Eriksen'},
             { text: 'Cristiano Ronaldo'}
         ]
-    },
-    {
-        question: 'Hvad blev Danmark-Finland?',
-        answers: [
-            { text: '4-0'},
-            { text: '1-2'},
-            { text: '1-4'},
-            { text: '0-1'}
-        ]
-    },
-    {
-        question: 'Hvem var Dansk topscorer under EM 2020?',
-        answers: [
-            { text: 'Kasper Dolberg'},
-            { text: 'Yussuf Poulsen'},
-            { text: 'Mikkel Damsgaard'},
-            { text: 'Joakim Mæhle'}
-        ]
-    },
-    {
-        question: 'Hvor mange mål scorede Danmark under EM 2020?',
-        answers: [
-            { text: '10'},
-            { text: '11', correct: false },
-            { text: '12', correct: true },
-            { text: '13', correct: false }
-        ]
-    },
-    {
-        question: 'Hvad hedder Danmarks landsholdstræner?',
-        answers: [
-            { text: 'Peter Schmeichel', correct: false },
-            { text: 'Kasper Hjulmand', correct: true },
-            { text: 'Nikolaj Jakobsen', correct: false },
-            { text: 'Micheal Laudrup', correct: false }
-        ]
-    },
-    {
-        question: 'Hvorfor hed det EM 2020, når det blev spillet i 2021?',
-        answers: [
-            { text: 'Copyright problemer med navnet "EM 2021"', correct: false },
-            { text: 'Pest', correct: false },
-            { text: 'Bombe trusler fra Rusland', correct: false },
-            { text: 'Covid-19', correct: true }
-        ]
-    },
-    {
-        question: 'Hvilket stadion blev finalen spillet i EM 2020?',
-        answers: [
-            { text: 'Wembley Stadium', correct: true },
-            { text: 'Telia Parken', correct: false },
-            { text: 'Stadio Olympico', correct: false },
-            { text: 'Stade de France', correct: false }
-        ]
-    },
-    {
-        question: 'Hvor mange tacklinger lavede Danmark under EM 2020?',
-        answers: [
-            { text: '82', correct: false },
-            { text: '76', correct: false },
-            { text: '88', correct: false },
-            { text: '79', correct: true }
-        ]
-    },
-    {
-        question: 'Hvow mange kampe spillede Danmark ved EM 2020',
-        answers: [
-            { text: '6', correct: true },
-            { text: '7', correct: false },
-            { text: '5', correct: false },
-            { text: '4', correct: false }
-        ]
-    },
-    {
-        question: 'Hvor mange redninger havde Kasper Schmeichel til EM 2020',
-        answers: [
-            { text: '15', correct: false },
-            { text: '23', correct: false },
-            { text: '17', correct: false },
-            { text: '18', correct: true }
-        ]
-    },
-    {
-        question: 'Hvor mange gule kort fik Italien under EM 2020',
-        answers: [
-            { text: '12', correct: true },
-            { text: '13', correct: false },
-            { text: '14', correct: false },
-            { text: '15', correct: false }
-        ]
-    },
-    {
-        question: 'Hvad var det, Cristiano Ronaldo flyttede fra bordet under et pressemøde?',
-        answers: [
-            { text: 'En flaske cola', correct: true },
-            { text: 'En flaske vand', correct: false },
-            { text: 'En bagel', correct: false },
-            { text: 'En øl', correct: false }
-        ]
-    },
-    {
-        question: 'Hvor mange stadioner har der været spillet på under EM 2020?',
-        answers: [
-            { text: '9', correct: false },
-            { text: '10', correct: false },
-            { text: '11', correct: true },
-            { text: '12', correct: false }
-        ]
-    },
-    {
-        question: 'Hvilken rekord er blevet slået under EM 2020?',
-        answers: [
-            { text: 'Flest røde kort i en EM-slutrunde', correct: false },
-            { text: 'Flest skud på stolpen i en EM-slutrunde', correct: false },
-            { text: 'Flest selvmål i en EM-slutrunde', correct: true },
-            { text: 'Flest indkast i en EM-slutrunde', correct: false }
-        ]
-    },
-    {
-        question: 'Hvem slog de franske verdensmestre ud af tuneringen?',
-        answers: [
-            { text: 'Tyskland', correct: false },
-            { text: 'Spanien', correct: false },
-            { text: 'Schweiz', correct: true },
-            { text: 'England', correct: false }
-        ]
     }
 ]
 
@@ -214,7 +88,7 @@ answerButton4.addEventListener('click', function () {
     questionsElement1.classList.remove('hide')
 })
 
-// know I want to display the next questions of my quiz using the same curse of action.
+// know I want to display the next question of my quiz using the same curse of action.
 
 function setOptions1 (question) {
     document.querySelector('#option12').textContent = question.answers[0].text
@@ -262,8 +136,6 @@ answerButton42.addEventListener('click', function () {
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
 })
-
-
 
 // If you didn't get any questions correct I want display 0
 
