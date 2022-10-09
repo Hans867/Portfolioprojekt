@@ -166,18 +166,10 @@ const questions = [
 ]
 
 // I want to keep score, so you get the result of how many you answered correctly.
+// And when the quiz is over I want to display the result
 
 let score = 0;
 let clicked = false;
-const result = document.querySelector('#result')
-
-function resultScore () {
-    {
-        if (clicked === true) {
-            score++
-        }
-    }
-}
 
 // I now want to display the first question and answer options
 
@@ -212,7 +204,7 @@ answerButton3.addEventListener('click', function () {
     if (clicked === true) {
         score ++
         console.log(score)
-        document.querySelector('#result').textContent = resultScore()
+        document.querySelector('#result').textContent = score
     }
     questionsElement.classList.add('hide')
     questionsElement1.classList.remove('hide')
@@ -247,7 +239,7 @@ answerButton12.addEventListener('click', function () {
     if (clicked === true) {
         score ++
         console.log(score)
-        document.querySelector('#result').textContent = resultScore()
+        document.querySelector('#result').textContent = score
     }
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
@@ -261,41 +253,18 @@ answerButton32.addEventListener('click', function () {
     restartContainer.classList.remove('hide')
 })
 answerButton42.addEventListener('click', function () {
-    clicked = true
-    if (clicked === true) {
         score ++
         console.log(score)
-        document.querySelector('#result').textContent = resultScore()
-    }
+        document.querySelector('#result').textContent = score
     questionsElement1.classList.add('hide')
     restartContainer.classList.remove('hide')
 })
 
-// when the quiz is over I want to display the result
+// If you didn't get any questions correct I want display 0
 
-document.querySelector('#result').textContent = resultScore()
-
-/*
-if (answerButton3 === 'Italien') {
-    score ++
-    document.getElementById('result').textContent = score;
+if (score === 0) {
+    document.querySelector('#result').textContent = 0
 }
-
-const result = document.querySelector('#result')
-
-document.querySelector('#result').textContent = score
-
-document.querySelector('#option3').onclick = function () {
-    score += 1;
-}
-
-if (clicked === true) {
-        score ++
-        console.log(score)
-        document.querySelector('#result').textContent = resultScore()
-    }
-
- */
 
 
 

@@ -70,9 +70,16 @@ body {
 }
 
 #resultContainer {
-    width: 500px;
+    width: 400px;
     border-radius: 10px;
-    box-shadow: 0 0 10px 2px
+    box-shadow: 0 0 10px 2px;
+}
+
+#textIP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
 #result {
